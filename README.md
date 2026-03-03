@@ -34,8 +34,6 @@
 ⚡ **06: Quantization**	Speed vs precision	int8/int4, GGUF, tradeoffs	📊 Benchmark different precisions
 🧪 **07: Sandbox**	Free experimentation	Mix & match concepts	🎛️ Build your own AI pipeline
 
-
-
 ## 🚀 Quick Start
 ### 1️⃣ Install Dependencies
 ```bash
