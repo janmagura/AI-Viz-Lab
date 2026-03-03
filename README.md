@@ -37,3 +37,36 @@ python scripts/install_deps.py
 
 # Or manually:
 pip install -r requirements.txt
+📚 Lesson Overview
+Lesson
+Topic
+Key Concepts
+Interactive Demo
+🔢 01: Tokens
+How text becomes numbers
+Tokenization, BPE, vocab size
+✏️ Type text → see tokens/IDs
+🧭 02: Embeddings
+Words as vectors
+Cosine similarity, meaning space
+🌐 2D/3D plot of word clusters
+🎯 03: Attention
+How models "focus"
+Q×Kᵀ×V, multi-head, layers
+🔥 Animated attention heatmaps
+🌍 04: Multilingual
+One space, many languages
+Cross-lingual alignment
+🗣️ Compare English/Chinese vectors
+🖼️ 05: Vision
+Images meet text
+Patch encoding, joint attention
+🖼️ Upload image → see token flow
+⚡ 06: Quantization
+Speed vs precision
+int8/int4, GGUF, tradeoffs
+📊 Benchmark different precisions
+🧪 07: Sandbox
+Free experimentation
+Mix & match concepts
+🎛️ Build your own AI pipeline
