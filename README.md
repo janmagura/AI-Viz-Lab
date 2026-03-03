@@ -24,8 +24,19 @@
 | 📤 **Export Results** | Save visualizations, chat logs, experiment data |
 | 🌍 **Multilingual Support** | Lessons available in English, Chinese, Spanish |
 
-## 🚀 Quick Start
+## 📚 Lesson Overview
+| Lesson	| Topic	| Key | Concepts	| Interactive Demo
+🔢 **01: Tokens**	How text becomes numbers	Tokenization, BPE, vocab size	✏️ Type text → see tokens/IDs
+🧭 **02: Embeddings**	Words as vectors	Cosine similarity, meaning space	🌐 2D/3D plot of word clusters
+🎯 **03: Attention**	How models "focus"	Q×Kᵀ×V, multi-head, layers	🔥 Animated attention heatmaps
+🌍 **04: Multilingual**	One space, many languages	Cross-lingual alignment	🗣️ Compare English/Chinese vectors
+🖼️ **05: Vision**	Images meet text	Patch encoding, joint attention	🖼️ Upload image → see token flow
+⚡ **06: Quantization**	Speed vs precision	int8/int4, GGUF, tradeoffs	📊 Benchmark different precisions
+🧪 **07: Sandbox**	Free experimentation	Mix & match concepts	🎛️ Build your own AI pipeline
 
+
+
+## 🚀 Quick Start
 ### 1️⃣ Install Dependencies
 ```bash
 # Clone the repository
@@ -37,36 +48,24 @@ python scripts/install_deps.py
 
 # Or manually:
 pip install -r requirements.txt
-📚 Lesson Overview
-Lesson
-Topic
-Key Concepts
-Interactive Demo
-🔢 01: Tokens
-How text becomes numbers
-Tokenization, BPE, vocab size
-✏️ Type text → see tokens/IDs
-🧭 02: Embeddings
-Words as vectors
-Cosine similarity, meaning space
-🌐 2D/3D plot of word clusters
-🎯 03: Attention
-How models "focus"
-Q×Kᵀ×V, multi-head, layers
-🔥 Animated attention heatmaps
-🌍 04: Multilingual
-One space, many languages
-Cross-lingual alignment
-🗣️ Compare English/Chinese vectors
-🖼️ 05: Vision
-Images meet text
-Patch encoding, joint attention
-🖼️ Upload image → see token flow
-⚡ 06: Quantization
-Speed vs precision
-int8/int4, GGUF, tradeoffs
-📊 Benchmark different precisions
-🧪 07: Sandbox
-Free experimentation
-Mix & match concepts
-🎛️ Build your own AI pipeline
+
+### 2️⃣ Configure for Your Hardware
+```bash
+# Auto-detect and generate config
+python src/utils/hardware_detect.py --generate-config
+
+# Or edit manually:
+notepad config.yaml
+
+### 3️⃣ Download a Model (Optional)
+```bash
+# Download Qwen2.5-VL-3B (default)
+python scripts/download_model.py --model Qwen/Qwen2.5-VL-3B-Instruct
+
+# Or use a smaller model for testing:
+python scripts/download_model.py --model Qwen/Qwen2.5-1.5B-Instruct
+
+### 4️⃣ Launch the Application
+```bash
+python src/main.py
+
