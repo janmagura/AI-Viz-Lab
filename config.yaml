@@ -1,0 +1,28 @@
+# examples/cpu_only.yaml - For CPU-only systems
+hardware:
+  device: "cpu"
+  threads: 4                    # Adjust to your CPU cores
+  max_memory_gb: 8             # Limit RAM usage
+
+model:
+  path: "Qwen/Qwen2.5-1.5B-Instruct"  # Smaller model for CPU
+  precision: "float32"                # Most stable on CPU
+  max_new_tokens: 64                  # Faster responses
+
+ui:
+  theme: "dark"
+  animations: false                   # Disable for slower PCs
+# examples/nvidia_cuda.yaml - For NVIDIA GPU
+hardware:
+  device: "cuda"
+  cuda_device: 0
+  gpu_memory_limit_gb: 6
+
+model:
+  path: "Qwen/Qwen2.5-VL-3B-Instruct"
+  precision: "float16"                # Faster with minimal quality loss
+  max_new_tokens: 256
+
+performance:
+  enable_profiling: true
+  log_to_file: true
