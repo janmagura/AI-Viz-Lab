@@ -1,4 +1,4 @@
-# # !!!!!! IN WORK STATUS - I have terrible network sppeed so this will take much longer !!!!    AI-Viz-Lab
+# # AI-Viz-Lab
 🎓 AI-Viz-Lab: Interactive AI Education Platform A complete, GitHub-ready educational application that teaches how AI works through interactive visualizations, live demonstrations, and hands-on experiments — all running locally on your PC!
 ### Interactive Visual Education for Understanding How AI Works
 
