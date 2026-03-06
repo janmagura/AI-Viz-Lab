@@ -1,4 +1,4 @@
-# # !!!!!! IN WORK STATUS - I have terrible network spped so this will take much longer !!!!    AI-Viz-Lab
+# # !!!!!! IN WORK STATUS - I have terrible network sppeed so this will take much longer !!!!    AI-Viz-Lab
 🎓 AI-Viz-Lab: Interactive AI Education Platform A complete, GitHub-ready educational application that teaches how AI works through interactive visualizations, live demonstrations, and hands-on experiments — all running locally on your PC!
 ### Interactive Visual Education for Understanding How AI Works
 
@@ -24,15 +24,16 @@
 | 📤 **Export Results** | Save visualizations, chat logs, experiment data |
 | 🌍 **Multilingual Support** | Lessons available in English, Chinese, Spanish |
 
+
 ## 📚 Lesson Overview
-| Lesson	| Topic	| Key | Concepts	| Interactive Demo
-🔢 **01: Tokens**	How text becomes numbers	Tokenization, BPE, vocab size	✏️ Type text → see tokens/IDs
-🧭 **02: Embeddings**	Words as vectors	Cosine similarity, meaning space	🌐 2D/3D plot of word clusters
-🎯 **03: Attention**	How models "focus"	Q×Kᵀ×V, multi-head, layers	🔥 Animated attention heatmaps
-🌍 **04: Multilingual**	One space, many languages	Cross-lingual alignment	🗣️ Compare English/Chinese vectors
-🖼️ **05: Vision**	Images meet text	Patch encoding, joint attention	🖼️ Upload image → see token flow
-⚡ **06: Quantization**	Speed vs precision	int8/int4, GGUF, tradeoffs	📊 Benchmark different precisions
-🧪 **07: Sandbox**	Free experimentation	Mix & match concepts	🎛️ Build your own AI pipeline
+| Lesson	| Topic	| Key | Concepts	| Interactive Demo|
+|🔢 **01: |Tokens**	How text becomes numbers	Tokenization, BPE, vocab size	✏️ Type text → see tokens/IDs|
+|🧭 **02: |Embeddings**	Words as vectors	Cosine similarity, meaning space	🌐 2D/3D plot of word clusters|
+|🎯 **03: |Attention**	How models "focus"	Q×Kᵀ×V, multi-head, layers	🔥 Animated attention heatmaps
+|🌍 **04: |Multilingual**	One space, many languages	Cross-lingual alignment	🗣️ Compare English/Chinese vectors|
+|🖼️ **05: |Vision**	Images meet text	Patch encoding, joint attention	🖼️ Upload image → see token flow|
+|⚡ **06: |Quantization**	Speed vs precision	int8/int4, GGUF, tradeoffs	📊 Benchmark different precisions|
+|🧪 **07: |Sandbox**	Free experimentation	Mix & match concepts	🎛️ Build your own AI pipeline|
 
 ## 🚀 Quick Start
 ### 1️⃣ Install Dependencies
