@@ -16,12 +16,19 @@
 | Feature | Description |
 |---------|-------------|
 | 🎯 **7 Interactive Lessons** | Tokens → Embeddings → Attention → Vision → Quantization |
+
 | 🎨 **Live Visualizations** | 2D/3D plots, heatmaps, animated flows |
+
 | ⚙️ **Hardware Adaptive** | Auto-detects CPU/GPU, suggests optimal settings |
+
 | 🔧 **Fully Configurable** | Adjust model, precision, max tokens via YAML or UI |
+
 | 💾 **100% Local** | No internet required after installation |
+
 | 📊 **Performance Monitor** | Real-time tokens/sec, memory usage, latency |
+
 | 📤 **Export Results** | Save visualizations, chat logs, experiment data |
+
 | 🌍 **Multilingual Support** | Lessons available in English, Chinese, Spanish |
 
 
