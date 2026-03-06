@@ -3,67 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎓 AI-Viz-Lab Demo</title>
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <title>AI-Viz-Lab - Interactive AI Education Platform</title>
     <style>
-        body { font-family: system-ui, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-        .hero { text-align: center; padding: 30px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px; margin-bottom: 30px; }
-        .card { border: 1px solid #e1e4e8; border-radius: 8px; padding: 20px; margin: 15px 0; }
-        .btn { display: inline-block; background: #0066cc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 500; }
-        .btn:hover { background: #0055aa; }
-        #plot { width: 100%; height: 500px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 60px 20px; color: white; }
+        header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        header p { font-size: 1.3em; opacity: 0.9; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .feature-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: transform 0.3s ease; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .feature-card h3 { color: #667eea; margin-bottom: 15px; font-size: 1.5em; }
+        .feature-card p { color: #666; line-height: 1.6; }
+        .lesson-icon { font-size: 2.5em; margin-bottom: 15px; }
+        .cta-section { text-align: center; padding: 60px 20px; color: white; }
+        .cta-button { display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2em; margin-top: 20px; }
+        .badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+        .badge { background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.9em; }
+        footer { text-align: center; padding: 30px; color: white; opacity: 0.8; }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>🎓 AI-Viz-Lab</h1>
-        <p>See how AI understands words — in your browser!</p>
+    <div class="container">
+        <header>
+            <h1>🎓 AI-Viz-Lab</h1>
+            <p>Interactive AI Education Platform</p>
+            <p style="font-size: 1em; margin-top: 10px;">Learn how AI works by seeing it work!</p>
+            <div class="badges">
+                <span class="badge">Python 3.10+</span>
+                <span class="badge">MIT License</span>
+                <span class="badge">Windows/Linux/macOS</span>
+                <span class="badge">100% Local</span>
+            </div>
+        </header>
+        <div class="features">
+            <div class="feature-card"><div class="lesson-icon">🔢</div><h3>Lesson 1: Tokens</h3><p>Discover how AI converts text into numbers through tokenization.</p></div>
+            <div class="feature-card"><div class="lesson-icon">🧭</div><h3>Lesson 2: Embeddings</h3><p>Explore how words become vectors in high-dimensional space.</p></div>
+            <div class="feature-card"><div class="lesson-icon">🎯</div><h3>Lesson 3: Attention</h3><p>Understand the attention mechanism that powers modern AI.</p></div>
+            <div class="feature-card"><div class="lesson-icon">🌍</div><h3>Lesson 4: Multilingual</h3><p>Learn how AI handles multiple languages in a single vector space.</p></div>
+            <div class="feature-card"><div class="lesson-icon">🖼️</div><h3>Lesson 5: Vision</h3><p>See how vision-language models process images and text together.</p></div>
+            <div class="feature-card"><div class="lesson-icon">⚡</div><h3>Lesson 6: Quantization</h3><p>Understand the tradeoffs between speed and precision.</p></div>
+        </div>
+        <div class="cta-section">
+            <h2>Ready to Start Learning?</h2>
+            <p style="margin: 20px 0; font-size: 1.1em;">No cloud required. No fees. Just your local PC!</p>
+        </div>
+        <footer><p>AI-Viz-Lab © 2024 | Open Source Educational Platform</p></footer>
     </div>
-
-    <div class="card">
-        <h2>🌌 Word Meaning Space (Demo)</h2>
-        <p>Words with similar meanings cluster together. <b>Drag to rotate • Scroll to zoom • Hover for details</b></p>
-        <div id="plot"></div>
-    </div>
-
-    <div class="card">
-        <h2>🚀 Want the Full Experience?</h2>
-        <ul>
-            <li>✅ 7 interactive lessons with live AI models</li>
-            <li>✅ Run locally on your PC (Windows/Linux/macOS)</li>
-            <li>✅ Supports Qwen, Llama, Mistral models</li>
-            <li>✅ Hardware-adaptive performance</li>
-        </ul>
-        <a href="https://github.com/janmagura/AI-Viz-Lab" class="btn">
-            Download Full AI-Viz-Lab on GitHub →
-        </a>
-    </div>
-
-    <script>
-        // Pre-computed sample data (Qwen-style embeddings, reduced to 3D)
-        const data = [{
-            x: [1.2, 1.4, -0.8, -0.9, 0.3, 0.4, -1.1, -1.0],
-            y: [-0.5, -0.3, 1.2, 1.4, 0.9, 1.0, -0.8, -0.9],
-            z: [0.8, 0.9, -0.4, -0.3, 1.5, 1.4, 0.2, 0.3],
-            mode: 'markers+text',
-            type: 'scatter3d',
-            name: 'Words',
-            marker: {size: 6, color: '#667eea', opacity: 0.8},
-            text: ['cat', 'dog', 'car', 'truck', 'Mars', 'Earth', 'run', 'jump'],
-            textposition: 'top center'
-        }];
-
-        const layout = {
-            title: '3D Word Embeddings (Sample)',
-            scene: {
-                xaxis: {title: 'Dim 1'},
-                yaxis: {title: 'Dim 2'},
-                zaxis: {title: 'Dim 3'}
-            },
-            margin: {l: 0, r: 0, b: 0, t: 40}
-        };
-
-        Plotly.newPlot('plot', data, layout, {responsive: true});
-    </script>
 </body>
 </html>
