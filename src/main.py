@@ -14,6 +14,10 @@ from utils.config import get_config
 from lessons.lesson01_tokens import TokenVisualizer, demo_tokenize
 from lessons.lesson02_embeddings import EmbeddingVisualizer, demo_embeddings
 from lessons.lesson03_attention import AttentionVisualizer, demo_attention
+from lessons.lesson04_multilingual import MultilingualDemo
+from lessons.lesson05_vision import VisionDemo
+from lessons.lesson06_quantization import QuantizationDemo
+from lessons.lesson07_sandbox import SandboxDemo
 
 
 def create_lesson_tokens(text: str):
@@ -161,6 +165,56 @@ def create_main_interface():
                     outputs=[attention_output]
                 )
             
+            # Lesson 4: Multilingual
+            with gr.TabItem("🌍 Lesson 4: Multilingual"):
+                gr.Markdown("""
+                ## One Space, Many Languages
+                
+                Multilingual models represent different languages in a **shared embedding space**.
+                Words with similar meanings across languages are positioned close together!
+                
+                Try: hello, world, love, peace, friend, water, fire, sun
+                """)
+                
+                multilingual_demo = MultilingualDemo()
+                multilingual_demo.create_interface()
+            
+            # Lesson 5: Vision
+            with gr.TabItem("🖼️ Lesson 5: Vision"):
+                gr.Markdown("""
+                ## Images Meet Text
+                
+                Vision-language models process images using **patch encoding** and **joint attention**.
+                Upload an image to see how it's converted to tokens!
+                """)
+                
+                vision_demo = VisionDemo()
+                vision_demo.create_interface()
+            
+            # Lesson 6: Quantization
+            with gr.TabItem("⚡ Lesson 6: Quantization"):
+                gr.Markdown("""
+                ## Speed vs Precision
+                
+                **Quantization** reduces model size and increases speed while managing accuracy.
+                Compare FP32, FP16, INT8, INT4, and GGUF formats!
+                """)
+                
+                quant_demo = QuantizationDemo()
+                quant_demo.create_interface()
+            
+            # Lesson 7: Sandbox
+            with gr.TabItem("🧪 Lesson 7: Sandbox"):
+                gr.Markdown("""
+                ## Free Experimentation
+                
+                Mix & match all concepts! Build your own AI pipeline and see how 
+                different parameters affect tokenization, embeddings, and attention.
+                """)
+                
+                sandbox_demo = SandboxDemo()
+                sandbox_demo.create_interface()
+            
             # Info tab
             with gr.TabItem("ℹ️ About"):
                 gr.Markdown("""
@@ -168,11 +222,13 @@ def create_main_interface():
                 
                 This interactive platform teaches AI concepts through visualization:
                 
-                - **Tokens**: How text becomes numbers
-                - **Embeddings**: Words as vectors in space
-                - **Attention**: How models focus on information
-                - **Vision**: Images meet text
-                - **Quantization**: Speed vs precision tradeoffs
+                - **🔢 Tokens**: How text becomes numbers
+                - **🧭 Embeddings**: Words as vectors in space
+                - **🎯 Attention**: How models focus on information
+                - **🌍 Multilingual**: Cross-lingual alignment
+                - **🖼️ Vision**: Images meet text
+                - **⚡ Quantization**: Speed vs precision tradeoffs
+                - **🧪 Sandbox**: Build your own pipeline
                 
                 ### Configuration
                 
